@@ -1,0 +1,11 @@
+# Submit server .submit file for
+#  Course CMSC132
+#  Project Project #5: Online Test
+
+courseName=CMSC132
+semester=201608
+projectNumber=Project #5
+courseKey=eb44aa2f7177b667
+authentication.type=ldap
+baseURL=https://submit.cs.umd.edu:443/fall2016
+submitURL=https://submit.cs.umd.edu:443/fall2016/eclipse/SubmitProjectViaEclipse
