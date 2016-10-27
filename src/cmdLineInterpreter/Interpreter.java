@@ -1,5 +1,8 @@
 package cmdLineInterpreter;
 
+import onlineTest.Manager;
+import onlineTest.SystemManager;
+
 /**
  * 
  * By running the main method of this class we will be able to
@@ -8,9 +11,9 @@ package cmdLineInterpreter;
  *
  */
 public class Interpreter {
+	private static Manager manager;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		manager = new SystemManager();
 	}
 }

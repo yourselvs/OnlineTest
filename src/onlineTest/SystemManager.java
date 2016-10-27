@@ -2,6 +2,10 @@ package onlineTest;
 
 public class SystemManager implements Manager {
 
+	public SystemManager() {
+		
+	}
+	
 	@Override
 	public boolean addExam(int examId, String title) {
 		// TODO Auto-generated method stub
