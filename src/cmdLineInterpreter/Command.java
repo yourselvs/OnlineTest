@@ -1,14 +1,16 @@
 package cmdLineInterpreter;
 
+import java.util.List;
+
 public class Command {
-	private String command;
-	private String[] args;
+	private String action;
+	private List<String> args;
 	
-	public Command(String command, String[] args){
-		this.command = command;
-		this.args = args;
+	public Command(String command, List<String> args2){
+		this.action = command;
+		this.args = args2;
 	}
 	
-	private String getCommand() {return command;}
-	private String[] getArgs() {return args;}
+	public String getCommand() {return action;}
+	public List<String> getArgs() {return args;}
 }

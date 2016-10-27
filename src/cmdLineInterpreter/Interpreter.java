@@ -1,7 +1,8 @@
 package cmdLineInterpreter;
 
-import onlineTest.Manager;
-import onlineTest.SystemManager;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * 
@@ -11,9 +12,36 @@ import onlineTest.SystemManager;
  *
  */
 public class Interpreter {
-	private static Manager manager;
+	private static CommandManager cmdManager;
+	private static Scanner kb;
 
 	public static void main(String[] args) {
-		manager = new SystemManager();
+		cmdManager = new CommandManager();
+		kb = new Scanner(System.in);
+		
+		while(true) {
+			cmdManager.runCommand(parseCommand(kb.nextLine()));
+		}
+	}
+	
+	private static Command parseCommand(String input) {
+		Scanner cmdScanner = new Scanner(input);
+		
+		if(!cmdScanner.hasNext()) {
+			cmdScanner.close();
+			return null;
+		}
+		
+		String command = "";
+		List<String> args = new ArrayList<String>();
+		
+		command = cmdScanner.next();
+		
+		while(cmdScanner.hasNext()) {
+			args.add(cmdScanner.next());
+		}
+		
+		cmdScanner.close();
+		return new Command(command, args);
 	}
 }

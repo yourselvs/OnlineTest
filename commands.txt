@@ -1,0 +1,22 @@
+addexam [id] [title]
+addquestion truefalse [id] [questionNumber] [text] [points] [answer]
+addquestion multiple [id] [questionNumber] [text] [points] [answer]
+addquestion blank [id] [questionNumber] [text] [points] [answer]
+getkey [id]
+addstudent [name]
+answerquestion truefalse [studentName] [id] [questionNumber] [answer]
+answerquestion multiple [studentName] [id] [questionNumber] [answer]
+answerquestion blank [studentName] [id] [questionNumber] [answer]
+getexamscore [studentName] [id]
+getgradingreport [studentname][id]
+setlettergradescutoffs [grade1] [cutoff1] [grade2] [cutoff2] [grade3] [cutoff3]....
+getnumericgrade [studentName]
+getlettergrade [stuidentName]
+getgrades
+getmax [id]
+getmin [id]
+getaverage [id]
+save
+restore [fileName]
+
+// capitalization for the first word in a command is all lowercase
